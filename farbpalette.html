@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farbpalette — Nørre Snede Fysioterapi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1A1A18;
+      color: #E8E4DC;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 48px 40px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      font-weight: 300;
+      color: #E8E4DC;
+      margin-bottom: 48px;
+      letter-spacing: -0.02em;
+    }
+
+    /* SWATCHES */
+    .swatches {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .swatch {
+      width: 140px;
+    }
+
+    .swatch-box {
+      width: 140px;
+      height: 100px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .swatch-hex {
+      font-size: 12px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: #888;
+      margin-bottom: 3px;
+    }
+
+    .swatch-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #E8E4DC;
+    }
+
+    .swatch-role {
+      font-size: 11px;
+      color: #666;
+      margin-top: 2px;
+    }
+
+    /* DEMO CARD */
+    .demo-section {
+      margin-bottom: 56px;
+    }
+
+    .demo-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .demo-card {
+      background: #ECEBE5;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 560px;
+    }
+
+    .demo-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #5A7E6A;
+      background: rgba(90, 126, 106, 0.12);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .demo-headline {
+      font-size: 26px;
+      font-weight: 600;
+      color: #282624;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .demo-text {
+      font-size: 15px;
+      color: #6A7078;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .demo-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #5A7E6A;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #5A7E6A;
+      border: 2px solid #5A7E6A;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .demo-accent {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #B88C5A;
+      font-weight: 500;
+    }
+
+    /* CSS BLOCK */
+    .css-section {
+      margin-bottom: 40px;
+    }
+
+    .css-block {
+      background: #111110;
+      border-radius: 12px;
+      padding: 28px 32px;
+      max-width: 600px;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .c-selector { color: #888; }
+    .c-prop { color: #7AACB8; }
+    .c-val { color: #C8E0B8; }
+    .c-comment { color: #444; }
+
+    /* INSPIRATION NOTE */
+    .inspiration {
+      max-width: 600px;
+      background: #111110;
+      border-radius: 12px;
+      padding: 24px 32px;
+      font-size: 13px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .inspiration strong {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Farbpalette</h1>
+  <p class="subtitle">Nørre Snede Fysioterapi</p>
+
+  <!-- SWATCHES -->
+  <div class="swatches">
+
+    <div class="swatch">
+      <div class="swatch-box" style="background: #F6F4F0;"></div>
+      <div class="swatch-hex">#F6F4F0</div>
+      <div class="swatch-label">--color-bg</div>
+      <div class="swatch-role">Hintergrund — Winterlicht</div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-box" style="background: #ECEBE5;"></div>
+      <div class="swatch-hex">#ECEBE5</div>
+      <div class="swatch-label">--color-primary</div>
+      <div class="swatch-role">Karten, Sections, Nav</div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-box" style="background: #8C9098;"></div>
+      <div class="swatch-hex">#8C9098</div>
+      <div class="swatch-label">--color-secondary</div>
+      <div class="swatch-role">Fließtext, Borders</div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-box" style="background: #5A7E6A;"></div>
+      <div class="swatch-hex">#5A7E6A</div>
+      <div class="swatch-label">--color-accent</div>
+      <div class="swatch-role">CTAs, Highlights — Dänisches Schilf</div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-box" style="background: #7AACB8;"></div>
+      <div class="swatch-hex">#7AACB8</div>
+      <div class="swatch-label">--color-teal</div>
+      <div class="swatch-role">Links, Tags — Winterhimmel</div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-box" style="background: #B88C5A;"></div>
+      <div class="swatch-hex">#B88C5A</div>
+      <div class="swatch-label">--color-warm</div>
+      <div class="swatch-role">Akzent — Schilfgold Sonnenuntergang</div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-box" style="background: #282624;"></div>
+      <div class="swatch-hex">#282624</div>
+      <div class="swatch-label">--color-light</div>
+      <div class="swatch-role">Überschriften, dunkler Text</div>
+    </div>
+
+  </div>
+
+  <!-- DEMO CARD -->
+  <div class="demo-section">
+    <div class="demo-label">Demo — so fühlt sich die Palette an</div>
+    <div class="demo-card">
+      <span class="demo-tag">Fysioterapi · Nørre Snede</span>
+      <h2 class="demo-headline">Bevægelse er medicin.</h2>
+      <p class="demo-text">Siden 1989 hjælper vi mennesker i Nørre Snede og omegn med at komme sig og forblive i bevægelse. Individuelt tilpasset behandling — fra undersøgelse til genoptræning.</p>
+      <div class="demo-buttons">
+        <button class="btn-primary">Book en tid</button>
+        <button class="btn-secondary">Læs mere</button>
+      </div>
+      <span class="demo-accent">↗ 75 77 01 61 · info@nsfys.dk</span>
+    </div>
+  </div>
+
+  <!-- CSS BLOCK -->
+  <div class="css-section">
+    <div class="demo-label">CSS Custom Properties</div>
+    <div class="css-block">
+      <span class="c-selector">:root</span> {<br>
+      &nbsp;&nbsp;<span class="c-prop">--color-bg</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-val">#F6F4F0</span>; <span class="c-comment">/* Winterlicht */</span><br>
+      &nbsp;&nbsp;<span class="c-prop">--color-primary</span>:&nbsp;&nbsp;<span class="c-val">#ECEBE5</span>; <span class="c-comment">/* Karten, Nav */</span><br>
+      &nbsp;&nbsp;<span class="c-prop">--color-secondary</span>: <span class="c-val">#8C9098</span>; <span class="c-comment">/* Fließtext */</span><br>
+      &nbsp;&nbsp;<span class="c-prop">--color-accent</span>:&nbsp;&nbsp;&nbsp;<span class="c-val">#5A7E6A</span>; <span class="c-comment">/* Dänisches Schilf */</span><br>
+      &nbsp;&nbsp;<span class="c-prop">--color-teal</span>:&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-val">#7AACB8</span>; <span class="c-comment">/* Winterhimmel */</span><br>
+      &nbsp;&nbsp;<span class="c-prop">--color-warm</span>:&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-val">#B88C5A</span>; <span class="c-comment">/* Schilfgold */</span><br>
+      &nbsp;&nbsp;<span class="c-prop">--color-light</span>:&nbsp;&nbsp;&nbsp;<span class="c-val">#282624</span>; <span class="c-comment">/* Überschriften */</span><br>
+      }
+    </div>
+  </div>
+
+  <!-- INSPIRATION -->
+  <div class="inspiration">
+    <strong>Woher kommen die Farben?</strong><br><br>
+    Zoe hat beim Laufen in Nørre Snede zwei Fotos gemacht — Morgengrauen und Sonnenuntergang über dem dänischen Moor. Schilf, Weg, Himmel, Mondlicht.<br><br>
+    <strong>Accent (#5A7E6A)</strong> — das gedämpfte Grün des Schilfs im Winterlicht. Gesundheit, Natur, Bewegung — ohne klinisches Grün zu sein.<br>
+    <strong>Teal (#7AACB8)</strong> — der Winterhimmel im Morgengrauen. Kühl, klar, nordisch.<br>
+    <strong>Warm (#B88C5A)</strong> — das Schilfgold im Sonnenuntergang. Wärme, Bodenständigkeit, 35 Jahre Erfahrung.<br>
+    <strong>Bg (#F6F4F0)</strong> — kein reines Weiß. Warmes Tageslicht. Atmet. Kein Krankenhaus.
+  </div>
+
+</body>
+</html>
