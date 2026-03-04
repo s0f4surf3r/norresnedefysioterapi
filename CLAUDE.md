@@ -88,11 +88,25 @@ Alle aus der Original-Website gescrapt (März 2026):
 ---
 
 ## Bekannte Eigenheiten / Fallstricke
+
+### Allgemein
 1. **`.njk` statt `.md`** für Seiten mit HTML-Blöcken (Eleventy Whitespace-Bug)
-2. **Flex-Gap + Text-Span**: In `.site-name` (flex) erzeugt jeder direkte `<span>` ein eigenes Flex-Item mit dem `gap`. Header-Name daher in einem einzigen `<span>`.
-3. **Fotostreifen mobile**: `forside-photos` → bei ≤768px: `grid-template-columns: 1fr 1fr` (2×2), sonst `repeat(4, 1fr)` + `height: 300px`
-4. **Safari**: `height: 100%` auf Grid-Kindern braucht explizite Höhe am Container. `aspect-ratio` allein reicht nicht für gleiche Höhen bei unterschiedlichen Spaltenbreiten.
-5. **WhatsApp-Bilder** im Projektroot — NICHT committen (sind vom Kunden)
+2. **WhatsApp-Bilder** im Projektroot — NICHT committen (sind vom Kunden)
+
+### Header
+3. **Flex-Gap + Text-Span**: In `.site-name` (flex) erzeugt jeder direkte `<span>` ein eigenes Flex-Item mit dem `gap`. Header-Name daher in einem einzigen `<span>` — NICHT aufteilen.
+
+### Foto-Grids
+4. **`forside-photos` Desktop**: `height: 300px` + `overflow: hidden` ist korrekt (1 Reihe). Im Mobile-Breakpoint MUSS `height: auto` gesetzt sein, sonst schneidet die fixe Höhe die 2. Reihe ab.
+5. **`aspect-ratio` auf Grid-Kindern**: Reicht allein nicht für gleiche Zellhöhen bei unterschiedlichen Spaltenbreiten. Immer auch explizite Höhe am Container oder `height: auto` auf den Bildern setzen.
+
+### Footer / Info-Strip Ausrichtung
+6. **Footer-Spalten**: `.footer-inner` hat `repeat(3, 1fr)`. NICHT auf `2fr 1fr 1fr` o.ä. ändern — das bricht die vertikale Ausrichtung mit dem `.info-strip` darüber.
+7. **Padding-Ebene**: Horizontales Padding gehört auf `.footer-inner` + `.footer-bottom`, NICHT auf `.site-footer` selbst. Sonst verschiebt sich der Inhalt auf breiten Viewports durch unterschiedliche Zentrierungs-Referenzpunkte.
+8. **Footer-Tagline-Länge**: Text in der ersten Footer-Spalte darf max. ~45 Zeichen pro Zeile haben, sonst Zeilenumbruch. Aktuell: "Siden 1989 hjælper vi i Nørre Snede og omegn." (46 Zeichen) — grenzwertig, nicht verlängern.
+
+### Icons
+9. **Nur inline SVG** — keine Emojis, keine externen Icon-Libraries. `stroke="currentColor"`, `fill="none"`, `stroke-width="1.5"`, `stroke-linecap="round"`, `stroke-linejoin="round"`.
 
 ---
 
