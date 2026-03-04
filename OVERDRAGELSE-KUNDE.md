@@ -26,11 +26,19 @@ Siden indeholder:
 ## Hvad I skal gøre nu
 
 ### 1. Domæne (vigtigst)
-Kontakt jeres domæneudbyder og bed dem pege `norresnedefysioterapi.dk` på:
+For at flytte `norresnedefysioterapi.dk` til den nye hjemmeside skal I give **udtrykkelig tilladelse** til jeres domæneudbyder. Det er jeres domæne — ingen kan ændre det uden jeres accept.
+
+**Hvad I skal gøre:**
+1. Log ind hos jeres domæneudbyder (fx One.com, Dandomain, Unoeuro e.l.)
+2. Find DNS-indstillinger for `norresnedefysioterapi.dk`
+3. Sæt en **CNAME-record** der peger på:
 ```
-norresnede-fysio.statichost.page
+norre-snede-fysio.statichost.page
 ```
-Det tager typisk 1–24 timer. Skriv til mig når I har gjort det, så ordner jeg resten.
+4. Skriv til mig når det er gjort — jeg aktiverer domænet i systemet
+
+Det kræver jeres aktive login og godkendelse. Ingen kan gøre det for jer uden adgang.
+Det tager typisk 1–24 timer at slå igennem.
 
 ### 2. Fotos vi mangler fra jer
 *(Se også den separate opgaveliste)*
