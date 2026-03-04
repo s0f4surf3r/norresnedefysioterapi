@@ -317,8 +317,24 @@ a:hover { text-decoration: underline; }
 }
 
 .service-icon {
-  font-size: 26px;
-  margin-bottom: 12px;
+  width: 44px;
+  height: 44px;
+  background: rgba(90, 126, 106, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-accent);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .service-card h3 {
@@ -472,20 +488,19 @@ a:hover { text-decoration: underline; }
 
 /* === Stats === */
 .stats-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 2px;
-  background: var(--color-primary);
-  border-radius: 12px;
-  overflow: hidden;
+  display: flex;
+  gap: 0;
   margin-bottom: 64px;
 }
 
 .stat-item {
-  background: var(--color-bg);
-  padding: 24px 20px;
+  flex: 1;
+  padding: 20px 0;
   text-align: center;
+  border-right: 1px solid rgba(40,38,36,0.1);
 }
+
+.stat-item:last-child { border-right: none; }
 
 .stat-number {
   display: block;
@@ -885,14 +900,15 @@ blockquote cite {
 /* === Forside Foto-Strip === */
 .forside-photos {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 0.9fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+  height: 300px;
   overflow: hidden;
 }
 
 .forside-photos img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
