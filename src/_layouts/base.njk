@@ -14,7 +14,10 @@
 <body class="{{ bodyClass or '' }}">
 
   <header class="site-header">
-    <a href="/" class="site-name">Nørre Snede<span> Fysioterapi</span></a>
+    <a href="/" class="site-name">
+      <img src="/images/logo.svg" alt="" class="site-logo" width="36" height="36">
+      Nørre Snede<span> Fysioterapi</span>
+    </a>
     <nav class="site-nav">
       <a href="/" {% if page.url == '/' %}class="active"{% endif %}>Forside</a>
       <a href="/behandlinger/" {% if '/behandlinger' in page.url %}class="active"{% endif %}>Behandlinger</a>

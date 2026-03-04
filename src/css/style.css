@@ -63,6 +63,9 @@ a:hover { text-decoration: underline; }
 }
 
 .site-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 15px;
   font-weight: 600;
   color: var(--color-light);
@@ -72,6 +75,12 @@ a:hover { text-decoration: underline; }
 }
 
 .site-name:hover { text-decoration: none; }
+
+.site-logo {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
 
 .site-nav {
   display: flex;
