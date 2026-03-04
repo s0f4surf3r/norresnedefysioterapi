@@ -108,6 +108,12 @@ Alle aus der Original-Website gescrapt (März 2026):
 ### Icons
 9. **Nur inline SVG** — keine Emojis, keine externen Icon-Libraries. `stroke="currentColor"`, `fill="none"`, `stroke-width="1.5"`, `stroke-linecap="round"`, `stroke-linejoin="round"`.
 
+### Info-Strip Spaltenanzahl
+10. **Info-Strip muss dieselbe Spaltenanzahl haben wie der Footer (3)**. `.info-strip-inner` nutzt `auto-fit` — wenn eine Seite mehr als 3 `info-block`-Kinder hat, entstehen mehr Spalten und die Ausrichtung zum Footer bricht. Forside hat genau 3 Blöcke (Ring til os · Åbningstider · Træningscenter).
+
+### Open Graph
+11. **OG-Tags vollständig in `base.njk` pflegen**: `og:title`, `og:description`, `og:type`, `og:site_name`, `og:locale`, `og:image` (mit width/height). Das `og:image` zeigt auf `team-foto.jpg` — bei Domain-Wechsel URL anpassen. Ohne vollständige OG-Tags kein Vorschaubild bei Facebook/WhatsApp/LinkedIn.
+
 ---
 
 ## CSS-Klassen (wichtigste)
