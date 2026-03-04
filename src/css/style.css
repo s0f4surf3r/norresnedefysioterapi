@@ -882,6 +882,36 @@ blockquote cite {
   white-space: nowrap;
 }
 
+/* === Behandling Fotos === */
+.behandling-photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 48px 0 56px;
+}
+
+.behandling-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.behandling-akupunktur {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 56px;
+}
+
+.behandling-akupunktur-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
 /* === Responsive === */
 @media (max-width: 900px) {
   .site-nav a { font-size: 13px; padding: 6px 8px; }
